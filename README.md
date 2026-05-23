@@ -1,132 +1,94 @@
-# The Quiet Hours — an AdSense website for Vercel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The hardest task, done first — The Quiet Hours</title>
+  <meta name="description" content="Why front-loading the work you dread is the highest-leverage habit in a focused life." />
+  <link rel="stylesheet" href="../styles.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+</head>
+<body>
 
-A complete, content-rich static website wired for **Google AdSense**, ready to
-deploy on **Vercel**. This is the *web* equivalent of what you asked for:
-AdMob does not work on websites (it's an Android/iOS-only SDK), so for a site
-that earns from Google ads, **AdSense** is the correct product. Same Google,
-same payouts — just the web version.
+  <header class="masthead">
+    <div class="wrap">
+      <div class="masthead__bar">
+        <div class="brand">
+          <span class="brand__name"><a href="../index.html">The Quiet Hours</a></span>
+          <span class="brand__tag">Field notes on attention, focus, and doing fewer things better.</span>
+        </div>
+        <nav class="nav">
+          <a href="../index.html">Latest</a>
+          <a href="../about.html">About</a>
+          <a href="../privacy.html">Privacy</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-```
-quiet-hours-site/
-├── index.html                 # homepage (hero, article grid, ad slots)
-├── about.html
-├── privacy.html               # required by AdSense (cookie/ads disclosure)
-├── styles.css
-├── ads.txt                    # required by AdSense — authorizes your account
-├── articles/
-│   ├── timeboxing.html
-│   ├── two-minute-rule.html
-│   ├── shutdown-ritual.html
-│   └── inconvenient-distraction.html
-└── README.md
-```
+  <main class="wrap">
+    <article class="article">
+      <div class="article__head">
+        <span class="kicker">The Essay</span>
+        <h1>The hardest task, done first</h1>
+        <p class="article__meta">A Quiet Hours essay &middot; 6 min read</p>
+      </div>
 
----
+      <div class="article__body">
+        <p>Every morning you are handed a small, non-renewable budget of willpower. It does not roll over. By mid-afternoon most of it has been spent on decisions you barely noticed making — what to reply to, what to read, what to ignore. The mistake almost everyone makes is to spend the richest part of that budget on the easiest work, and to save the hardest task for the hours when nothing is left.</p>
 
-## ⚠️ Read this first: how AdSense actually starts paying
+        <p>Reverse it. Identify the single task you most want to avoid — the difficult email, the blank document, the conversation you keep rescheduling — and give it the first protected block of your day, before you have opened a single message. The point is not heroics. The point is arithmetic: the task is no larger at nine in the morning than it is at four in the afternoon, but you are.</p>
 
-Unlike a code library you just `import`, AdSense has a **gate**: ads only appear
-**after Google reviews and approves your live site**, which can take anywhere
-from a day to a few weeks. Until then, ad slots stay blank — that's normal, not
-a bug. To get approved you need:
+        <h2>Why dread is the real cost</h2>
+        <p>The hidden expense of a postponed task is rarely the task itself. It is the dread. A job you have decided to avoid does not sit quietly in a list; it leaks. It colours the meeting you are half-attending, the lunch you are not enjoying, the walk home you spend rehearsing excuses. Finishing it early does not just complete the work — it shuts off the leak, and the rest of the day is quietly returned to you.</p>
 
-1. The site **live on a real URL** (your Vercel domain works).
-2. **Genuine, original content** (this site ships with 4 real essays — keep them
-   or, better, replace them with your own writing; thin/empty sites get rejected).
-3. A **privacy policy** (included) and **ads.txt** (included).
-4. An **approved AdSense account** tied to your domain.
+        <blockquote>You are not behind because you lack time. You are behind because the worst job is still ahead of you.</blockquote>
 
-Two more rules that protect your account:
-- **Ads never show on `localhost`** — only on the deployed site.
-- **Never click your own ads.** Google permanently bans accounts for it.
+        <p>This is why the order matters more than the effort. Two people can do identical work in identical hours and have completely different days, depending only on whether the dreaded thing came first or last.</p>
+      </div>
 
----
+      <!-- AD SLOT · in-article -->
+      <aside class="ad" aria-label="Advertisement">
+        <span class="ad__label">Advertisement</span>
+        <!-- AdSense unit: "Article — In-content" -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="0000000003"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </aside>
 
-## Step 1 — Deploy to Vercel (no build step; it's static)
+      <div class="article__body">
+        <h2>The fixed block</h2>
+        <p>Make the block concrete: forty-five minutes, a closed door, no inbox. Set a visible countdown. The artificial deadline is not a gimmick — a finish line you can see narrows attention in a way an open-ended afternoon never will. When the timer ends, you stop, whether or not the task is finished. Stopping on time is what makes you willing to start again tomorrow.</p>
 
-**Easiest — drag & drop:** go to [vercel.com](https://vercel.com), New Project →
-deploy, and drop the `quiet-hours-site` folder in. Done.
+        <p>Notice what you are <em>not</em> doing. You are not checking whether you feel motivated. Motivation is a passenger, not a driver; it tends to arrive a few minutes after the work does, not before. The block exists precisely so that you do not have to negotiate with yourself at the moment you are least equipped to win the argument.</p>
 
-**Or via Git:** push this folder to a GitHub repo, then "Import Project" in
-Vercel. Framework preset: **Other**. Build command: **(leave empty)**.
-Output directory: **(leave empty / `.`)** — the files are served as-is.
+        <h2 id="weekly">A note on the weekly view</h2>
+        <p>Daily planning keeps you busy; it is the weekly review that keeps you aimed. Once a week, step back from the day-to-day and ask a single uncomfortable question: what did I do this week that I should simply stop doing? Most lists grow by accretion — tasks are added far more readily than they are removed — and the result is a calendar full of motion that no longer points anywhere. Subtraction, done weekly, compounds faster than any productivity system you can add.</p>
 
-**Or via CLI:**
-```bash
-npm i -g vercel
-cd quiet-hours-site
-vercel            # preview
-vercel --prod     # production
-```
+        <p>Begin tomorrow with the worst thing. Protect forty-five minutes for it. Let the dread end before the day has a chance to begin. Everything else you have been trying to fix about your focus tends to follow from that one reversal.</p>
+      </div>
 
-You'll get a live URL like `https://quiet-hours-site.vercel.app`. Open it — the
-site works fully right now; only the ad boxes are empty (expected pre-approval).
+      <a class="article__back" href="../index.html">&larr; Back to The Quiet Hours</a>
+    </article>
+  </main>
 
-> Tip: a custom domain (Vercel → Project → Settings → Domains) tends to fare
-> better in AdSense review than a default `*.vercel.app` subdomain.
-
-## Step 2 — Get your AdSense IDs
-
-1. Sign up / sign in at [adsense.google.com](https://adsense.google.com).
-2. **Add your site** (your Vercel URL). AdSense gives you a code snippet — it's
-   the same loader already in every page's `<head>` of this project, so once you
-   do Step 3 you've satisfied the "connect your site" requirement.
-3. Note your **publisher ID**: `ca-pub-` followed by 16 digits.
-4. Create **display ad units** (Ads → By ad unit → Display). Each one gives a
-   **10-digit slot ID**. Create one per placement (6 used here).
-
-## Step 3 — Plug your IDs in
-
-**a) Publisher ID (one find-and-replace does the whole site):**
-search every file for `ca-pub-XXXXXXXXXXXXXXXX` and replace with your real
-`ca-pub-…`. This updates every loader script and every `data-ad-client`.
-
-**b) Slot IDs:** replace each placeholder `data-ad-slot` with the real slot ID
-from the matching ad unit:
-
-| Placeholder slot | Location |
-|---|---|
-| `0000000001` | Home — leaderboard under the hero |
-| `0000000002` | Home — in-feed (inside the article grid) |
-| `0000000003` | Article — in-content (timeboxing) |
-| `0000000004` | Article — in-content (two-minute-rule) |
-| `0000000005` | Article — in-content (shutdown-ritual) |
-| `0000000006` | Article — in-content (inconvenient-distraction) |
-
-**c) `ads.txt`:** replace `pub-XXXXXXXXXXXXXXXX` with your publisher ID digits
-(written as `pub-…`, no `ca-`). After deploy, confirm it loads at
-`https://yourdomain/ads.txt`.
-
-### Shortcut: Auto ads (skip the slot IDs entirely)
-If you'd rather not manage individual units, just do step (a), then in AdSense
-turn on **Auto ads** for your site. Google then places ads automatically using
-the loader script that's already in every `<head>`. You can leave the manual
-`<ins>` units in place or delete them. Manual units give you control over
-placement (the "strategy"); Auto ads is the one-click option.
-
-## Step 4 — Submit for review & wait
-In AdSense, request review of your site. Keep it live and unchanged while Google
-checks it. When approved, ads begin filling the slots automatically — no
-redeploy needed.
-
----
-
-## Customizing
-- **Content:** edit the `.html` files in `articles/` or add new ones (copy an
-  existing file, change the text, link it from `index.html`). More original
-  content improves both approval odds and revenue.
-- **Look:** all styling is in `styles.css` (colors are CSS variables at the top).
-- **Contact/identity:** fill in the placeholders in `about.html` and
-  `privacy.html` before going live.
-
-## Compliance checklist before launch
-- [ ] Real `ca-pub-…` everywhere (`grep -r ca-pub- .` shows no `XXXX`).
-- [ ] `ads.txt` updated and reachable at `/ads.txt`.
-- [ ] Privacy policy contact + date filled in.
-- [ ] Approved AdSense account, site submitted for review.
-- [ ] You never click your own ads.
-
-## Docs
-- AdSense get-started: https://support.google.com/adsense/answer/9724
-- Where to place ad code: https://support.google.com/adsense/answer/9190028
-- Vercel static deploys: https://vercel.com/docs
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <div class="footer__brand">The Quiet Hours</div>
+        <p>&copy; <span id="yr"></span> The Quiet Hours. Original writing on attention.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="../index.html">Latest</a>
+        <a href="../about.html">About</a>
+        <a href="../privacy.html">Privacy &amp; Cookies</a>
+      </nav>
+    </div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,81 +1,213 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Designing a shutdown ritual — The Quiet Hours</title>
-  <meta name="description" content="Unfinished work follows you home as dread. A short closing routine tells your brain the day is genuinely over." />
-  <link rel="stylesheet" href="../styles.css" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-</head>
-<body>
-  <header class="masthead">
-    <div class="wrap">
-      <div class="masthead__bar">
-        <div class="brand">
-          <span class="brand__name"><a href="../index.html">The Quiet Hours</a></span>
-          <span class="brand__tag">Field notes on attention, focus, and doing fewer things better.</span>
-        </div>
-        <nav class="nav">
-          <a href="../index.html">Latest</a>
-          <a href="../about.html">About</a>
-          <a href="../privacy.html">Privacy</a>
-        </nav>
-      </div>
-    </div>
-  </header>
+/* ════════════════════════════════════════════════════════════════════
+   THE QUIET HOURS — editorial stylesheet
+   Aesthetic: warm-paper magazine. Cream ground, ink type, sienna accent.
+   ════════════════════════════════════════════════════════════════════ */
 
-  <main class="wrap">
-    <article class="article">
-      <div class="article__head">
-        <span class="kicker">Ritual</span>
-        <h1>Designing a shutdown ritual</h1>
-        <p class="article__meta">A Quiet Hours essay &middot; 5 min read</p>
-      </div>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap');
 
-      <div class="article__body">
-        <p>There is a particular kind of tiredness that has nothing to do with how hard you worked. It is the tiredness of a day that never properly ended — of carrying the office home in your head, of lying awake mentally drafting tomorrow's first email. The work itself stopped hours ago. The <em>worrying</em> never got the memo.</p>
-        <p>The fix is almost embarrassingly small: a deliberate shutdown ritual, performed at the same point each day, that signals to your own mind that the workday is closed and nothing more will be decided tonight. Three minutes is enough. Done consistently, it does more for your rest than any evening routine you layer on top of it.</p>
-        <h2>What the ritual does</h2>
-        <p>Open loops are the enemy of rest. Any task you have started but not finished, any decision you have deferred, sits in working memory as a faint alarm that will not switch off on its own. The ritual switches it off — not by finishing everything, which is impossible, but by capturing everything, which is not.</p>
-      </div>
+:root {
+  --paper:      #f5efe2;
+  --paper-2:    #efe7d6;
+  --card:       #fffdf7;
+  --ink:        #1d1a15;
+  --ink-soft:   #4b443a;
+  --muted:      #837a6b;
+  --rule:       #ddd2bd;
+  --accent:     #ad3f24;   /* burnt sienna */
+  --accent-dk:  #8a2f18;
+  --gold:       #b78a3c;
+  --maxw:       1140px;
+  --serif:      'Newsreader', Georgia, serif;
+  --display:    'Fraunces', Georgia, serif;
+}
 
-      <aside class="ad" aria-label="Advertisement">
-        <span class="ad__label">Advertisement</span>
-        <!-- AdSense unit: "Article — In-content" -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="0000000005"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </aside>
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-      <div class="article__body">
-        <h2>The three-minute version</h2>
-        <p>At a fixed time, do exactly three things. First, glance at every open task and confirm each one is either done or written down somewhere you trust. Second, write the single first action you will take tomorrow — not the topic, the <em>action.</em> "Open the pricing document and draft section two" beats "work on pricing" by a wide margin, because a concrete first move removes the friction that otherwise greets you in the morning. Third, say a closing phrase, out loud or in your head, that means the same thing every day. It sounds silly. It works precisely because it is a repeatable signal, and signals are what the brain uses to change states.</p>
-        <blockquote>You cannot rest from a day you never told yourself was over.</blockquote>
-        <p>The ritual is not about doing more. It is about drawing a clean line, so that the hours after work are genuinely yours — and the hours of work, when you return to them, start from a running start instead of a cold one.</p>
-      </div>
+html { scroll-behavior: smooth; }
 
-      <a class="article__back" href="../index.html">&larr; Back to The Quiet Hours</a>
-    </article>
-  </main>
+body {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(circle at 12% -10%, rgba(173,63,36,.05), transparent 40%),
+    radial-gradient(circle at 100% 0%, rgba(183,138,60,.06), transparent 35%);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 
-  <footer class="footer">
-    <div class="wrap footer__grid">
-      <div>
-        <div class="footer__brand">The Quiet Hours</div>
-        <p>&copy; <span id="yr"></span> The Quiet Hours. Original writing on attention.</p>
-      </div>
-      <nav class="footer__links">
-        <a href="../index.html">Latest</a>
-        <a href="../about.html">About</a>
-        <a href="../privacy.html">Privacy &amp; Cookies</a>
-      </nav>
-    </div>
-  </footer>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-dk); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ── Masthead ───────────────────────────────────────────────────────── */
+.masthead { border-bottom: 1.5px solid var(--ink); }
+.masthead__bar {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 18px 0 14px; gap: 20px; flex-wrap: wrap;
+}
+.brand { display: flex; flex-direction: column; line-height: 1; }
+.brand__name {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-optical-sizing: auto;
+  letter-spacing: -.02em;
+  color: var(--ink);
+}
+.brand__name a { color: inherit; }
+.brand__name a:hover { text-decoration: none; }
+.brand__tag {
+  font-style: italic; color: var(--muted);
+  font-size: .95rem; margin-top: 8px; max-width: 34ch;
+}
+.nav { display: flex; gap: 22px; align-items: baseline; }
+.nav a {
+  color: var(--ink-soft);
+  font-size: .78rem; text-transform: uppercase; letter-spacing: .14em;
+  font-weight: 600;
+}
+.nav a:hover { color: var(--accent); text-decoration: none; }
+.masthead__date {
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .22em;
+  color: var(--muted); padding: 7px 0; display: flex; justify-content: space-between;
+}
+
+/* ── Kicker / labels ────────────────────────────────────────────────── */
+.kicker {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .2em;
+  font-weight: 700; color: var(--accent);
+}
+
+/* ── Hero ───────────────────────────────────────────────────────────── */
+.hero { padding: 46px 0 30px; border-bottom: 1px solid var(--rule); }
+.hero__grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 48px; }
+.hero h1 {
+  font-family: var(--display); font-weight: 600;
+  font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.02;
+  letter-spacing: -.025em; margin: 14px 0 18px;
+}
+.hero h1 a { color: var(--ink); }
+.hero h1 a:hover { color: var(--accent); text-decoration: none; }
+.hero__lede { font-size: 1.3rem; color: var(--ink-soft); max-width: 40ch; }
+.hero__byline { margin-top: 22px; font-size: .85rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: .12em; }
+.hero__aside { border-left: 1px solid var(--rule); padding-left: 32px; }
+.hero__aside h3 {
+  font-family: var(--display); font-size: .8rem; text-transform: uppercase;
+  letter-spacing: .18em; color: var(--muted); margin-bottom: 16px;
+  border-bottom: 1px solid var(--rule); padding-bottom: 10px; font-weight: 600;
+}
+.hero__aside ol { list-style: none; counter-reset: q; }
+.hero__aside li { counter-increment: q; padding: 12px 0; border-bottom: 1px dotted var(--rule); }
+.hero__aside li::before {
+  content: counter(q, decimal-leading-zero); color: var(--accent);
+  font-family: var(--display); font-weight: 600; margin-right: 12px; font-size: .9rem;
+}
+.hero__aside a { color: var(--ink); font-size: 1.02rem; }
+.hero__aside a:hover { color: var(--accent); }
+
+/* ── Article grid ───────────────────────────────────────────────────── */
+.section-head {
+  display: flex; align-items: center; gap: 16px; margin: 42px 0 8px;
+}
+.section-head h2 {
+  font-family: var(--display); font-weight: 600; font-size: 1.05rem;
+  text-transform: uppercase; letter-spacing: .16em; white-space: nowrap;
+}
+.section-head::after { content: ""; flex: 1; height: 1px; background: var(--ink); }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: var(--rule); border: 1px solid var(--rule); margin-top: 18px; }
+.card {
+  background: var(--card); padding: 26px 24px 30px;
+  display: flex; flex-direction: column; transition: background .2s;
+}
+.card:hover { background: #fffefb; }
+.card .kicker { margin-bottom: 12px; }
+.card h3 {
+  font-family: var(--display); font-weight: 600; font-size: 1.55rem;
+  line-height: 1.12; letter-spacing: -.015em; margin-bottom: 12px;
+}
+.card h3 a { color: var(--ink); }
+.card h3 a:hover { color: var(--accent); text-decoration: none; }
+.card p { color: var(--ink-soft); font-size: 1.05rem; }
+.card .read { margin-top: auto; padding-top: 18px; font-size: .78rem;
+  text-transform: uppercase; letter-spacing: .14em; color: var(--accent); font-weight: 700; }
+
+/* ── Ad slot ────────────────────────────────────────────────────────── */
+.ad {
+  margin: 40px auto; text-align: center; max-width: 100%;
+  background: repeating-linear-gradient(45deg, var(--paper-2), var(--paper-2) 10px, transparent 10px, transparent 20px);
+  border: 1px dashed var(--rule); border-radius: 4px;
+  padding: 12px; min-height: 120px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.ad__label {
+  font-size: .62rem; text-transform: uppercase; letter-spacing: .26em;
+  color: var(--muted); margin-bottom: 8px; align-self: center;
+}
+.ad ins { width: 100%; }
+.ad--in-grid { grid-column: 1 / -1; margin: 0; border: none; background: var(--card);
+  border-top: 1px solid var(--rule); }
+
+/* ── Article page ───────────────────────────────────────────────────── */
+.article { max-width: 720px; margin: 0 auto; padding: 50px 0 30px; }
+.article__head { text-align: center; margin-bottom: 40px; }
+.article__head h1 {
+  font-family: var(--display); font-weight: 600;
+  font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1.06;
+  letter-spacing: -.025em; margin: 14px 0 18px;
+}
+.article__meta { font-size: .82rem; text-transform: uppercase; letter-spacing: .14em;
+  color: var(--muted); }
+.article__body { font-size: 1.24rem; line-height: 1.72; }
+.article__body p { margin-bottom: 1.4em; }
+.article__body p:first-of-type::first-letter {
+  font-family: var(--display); font-weight: 600; float: left; font-size: 4.2rem;
+  line-height: .8; padding: 6px 12px 0 0; color: var(--accent);
+}
+.article__body h2 {
+  font-family: var(--display); font-weight: 600; font-size: 1.7rem;
+  margin: 1.6em 0 .5em; letter-spacing: -.01em;
+}
+.article__body blockquote {
+  border-left: 3px solid var(--accent); padding-left: 22px; margin: 1.6em 0;
+  font-style: italic; color: var(--ink-soft); font-size: 1.35rem;
+}
+.article__back { display: inline-block; margin-top: 30px; font-size: .8rem;
+  text-transform: uppercase; letter-spacing: .14em; font-weight: 700; }
+
+/* ── Static pages ───────────────────────────────────────────────────── */
+.page { max-width: 720px; margin: 0 auto; padding: 50px 0; }
+.page h1 { font-family: var(--display); font-weight: 600; font-size: 2.8rem;
+  letter-spacing: -.02em; margin-bottom: 8px; }
+.page h2 { font-family: var(--display); font-weight: 600; font-size: 1.5rem;
+  margin: 1.4em 0 .4em; }
+.page p, .page li { color: var(--ink-soft); margin-bottom: 1em; }
+.page ul { padding-left: 1.4em; }
+
+/* ── Footer ─────────────────────────────────────────────────────────── */
+.footer { border-top: 1.5px solid var(--ink); margin-top: 60px; padding: 36px 0 60px;
+  font-size: .9rem; color: var(--muted); }
+.footer__grid { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+.footer__brand { font-family: var(--display); font-size: 1.4rem; color: var(--ink); font-weight: 600; }
+.footer a { color: var(--ink-soft); }
+.footer__links { display: flex; gap: 20px; flex-wrap: wrap; }
+
+/* ── Responsive ─────────────────────────────────────────────────────── */
+@media (max-width: 880px) {
+  .hero__grid { grid-template-columns: 1fr; gap: 30px; }
+  .hero__aside { border-left: none; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 24px; }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  body { font-size: 1.08rem; }
+  .grid { grid-template-columns: 1fr; }
+  .nav { gap: 14px; }
+  .masthead__bar { gap: 10px; }
+}
